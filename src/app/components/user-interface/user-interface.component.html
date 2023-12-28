@@ -1,0 +1,41 @@
+<div class="w-100 d-block">
+    <img alt="logo" class="d-block mx-3 my-4 p-1 rounded" src="https://9antra.tn/content/images/LogoBridge.png"/>
+    
+</div>
+<div class="d-block team">
+        <div class="j-team">
+            <h3 class="text-center text-dark">Improve your skills on your own<br>
+                To prepare for a better future</h3>
+            <button class="team-view">Register now</button>
+        </div>
+</div>
+<div class="d-flex justify-content-between">
+    <h1 class="p-4 m-3">Discover Our Courses</h1>
+    <button class="team-view-2">View more</button>
+</div>
+<div class="latest-news">
+    <div class="container">
+      <div class="row no-gutters">
+        <div class="col-md-4" *ngFor="let c of courses">
+            <div class="post-entry">
+                <a routerLink="#">
+                  <img class="img-fluid" alt="Image" [src]="c.processedImg">
+                </a>
+                <div class="caption">
+                  <div class="caption-inner">
+                    <h3 class="mb-3">{{c.name}}</h3>
+                    <div class="author d-flex align-items-center">
+                      
+                      <div class="text">
+                        <h4>{{c.prix}} DT / Month</h4>
+                        <span>Dec 28, 2023</span>
+                      </div>
+                    </div>
+                  </div>
+                </div> 
+              </div>
+        </div>
+      </div>
+
+    </div>
+</div>

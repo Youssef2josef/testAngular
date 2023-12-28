@@ -1,0 +1,30 @@
+<div class="table-responsive">
+    <table class="table">
+        <tr>
+            <th class="th-sm">id</th>
+            <th class="th-sm">name</th>
+            <th class="th-sm">prix</th>
+            <th class="th-sm">image</th>
+
+            <th class="th-sm">Actions</th>
+            <th>
+                <button type="button" class="btn btn-round btn-success btn-sm" (click)="goToAdd()">
+                    Add Course
+                </button>
+            </th>
+        </tr>
+        <tr *ngFor="let m of courses">
+            <td class="td-sm">{{m.id}}</td>
+            <td class="td-sm">{{m.name}}</td>
+            <td class="td-sm">{{m.prix}}</td>  
+            <td class="td-sm"><img style="width: 100px;height: 100px;" [src]="m.processedImg"></td>  
+            <td>
+                <div class="btn-group" role="group">
+                <button class="btn btn-warning btn-sm" (click)="goToEdit(m.id)">edit</button>
+                <button class="btn btn-danger btn-sm" (click)="deleteCourse(m.id)">delete</button>
+                </div>
+            </td>
+            <td></td>
+        </tr>
+    </table>
+    </div>
